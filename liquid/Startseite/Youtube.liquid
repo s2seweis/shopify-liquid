@@ -1,0 +1,40 @@
+<style>
+    .video-container {
+      display: flex;
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      height: auto; /* Set the height of the container to the full viewport height */
+      margin: 0px 15px;
+    }
+  
+    .video-wrapper {
+      display: flex;
+      flex-wrap: wrap; /* Allow videos to wrap to the next line if needed */
+      justify-content: space-between; /* Distribute content evenly with space between each video */
+    }
+  
+    .video-wrapper iframe {
+      width: calc(50% - 30px); /* Each video takes up half of the container width with 15px margin on both sides */
+      height: 220px;
+      margin-bottom: 15px;
+    }
+  
+    @media (max-width: 800px) {
+      .video-wrapper {
+        width: 100%; /* Take up 100% of the container width on smaller screens */
+        justify-content: center; /* Center content horizontally on smaller screens */
+      }
+  
+      .video-wrapper iframe {
+        width: calc(85% - 30px); /* On screens smaller than 800px, each video takes up 100% of the container width with 15px margin on both sides */
+        margin-right: 0; /* No margin between videos on smaller screens */
+      }
+    }
+  </style>
+  
+  <div class="video-container">
+    <div class="video-wrapper">
+      <iframe width="250" height="220" src="https://www.youtube.com/embed/yd_Lh4FGuOw" frameborder="0" allowfullscreen></iframe>
+      <iframe width="250" height="220" src="https://www.youtube.com/embed/wQGGMDl7Bw8" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
